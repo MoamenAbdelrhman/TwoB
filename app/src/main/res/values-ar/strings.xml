@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Profile -->
+    <string name="language">اللغة</string>
+    <string name="english">English</string>
+    <string name="arabic">العربية</string>
+
+    <string name="personal_report">التقرير الشخصي</string>
+    <string name="shift_and_time_off">الوردية والإجازات</string>
+
+    <string name="settings">الإعدادات</string>
+    <string name="change_password">تغيير كلمة المرور</string>
+    <string name="change_my_profile_picture">تغيير صورة الملف الشخصي</string>
+    <string name="log_out">تسجيل الخروج</string>
+
+    <string name="manager">المدير</string>
+    <string name="department">القسم</string>
+
+    <!-- Bottom Navigation -->
+    <string name="fingerprint">البصمة</string>
+    <string name="services">الخدمات</string>
+    <string name="ask_2b">اسأل 2B</string>
+    <string name="notification">الإشعارات</string>
+    <string name="profile">الملف الشخصي</string>
+
+    <!-- Dialogs -->
+    <string name="your_manager">مديرك:</string>
+    <string name="your_department">قسمك:</string>
+    <string name="no_manager_found">لم يتم العثور على مدير</string>
+
+    <string name="login_title">تسجيل الدخول</string>
+    <string name="login_subtitle">مرحبًا بعودتك!</string>
+    <string name="login_id_label">المعرف</string>
+    <string name="login_password_label">كلمة المرور</string>
+    <string name="login_button">تسجيل الدخول</string>
+    <string name="login_loading">جارٍ التحميل…</string>
+    <string name="login_validation_error">يرجى إدخال اسم المستخدم وكلمة المرور</string>
+    <string name="login_default_error">اسم المستخدم أو كلمة المرور غير صحيحة</string>
+    <string name="network_error_message">حدث خطأ ما. يرجى التحقق من الاتصال والمحاولة مرة أخرى.</string>
+    <string name="fingerprint_login_label">استخدام البصمة لتسجيل الدخول (المرة القادمة)</string>
+    <string name="profile_dialog_generic_error">تعذّر تحميل هذه البيانات. يرجى المحاولة مرة أخرى.</string>
+
+
+    <!-- Services -->
+    <string name="search">بحث</string>
+
+    <string name="permission_request">طلب إذن</string>
+    <string name="offsite_work_request">طلب عمل خارج الموقع</string>
+    <string name="fingerprint_history">سجل البصمة</string>
+    <string name="vacation_request">طلب إجازة</string>
+    <string name="penalty_history">سجل الجزاءات</string>
+    <string name="kpis_earned">مؤشرات الأداء المكتسبة</string>
+    <string name="official_holidays">الإجازات الرسمية</string>
+    <string name="internal_jobs">الوظائف الداخلية</string>
+    <string name="company_assets">أصول الشركة</string>
+    <string name="resignation_request">طلب الاستقالة</string>
+
+    <string name="request_resignation">طلب الاستقالة</string>
+    <string name="resignation_intro_part_1">نحن ممتنون لمساهماتك ونأسف لرؤيتك تغادر. إذا كنت ترغب في مناقشة قرارك، فنحن هنا من أجل</string>
+    <string name="resignation_contact_link">مساعدتك</string>
+    <string name="resignation_intro_part_2">. وإلا، يرجى اتباع الخطوات التالية.</string>
+    <string name="resignation_date">تاريخ الاستقالة</string>
+    <string name="select_resignation_date">اختر تاريخ الاستقالة</string>
+    <string name="last_working_day">آخر يوم عمل</string>
+    <string name="select_last_working_day">اختر آخر يوم عمل</string>
+    <string name="resignation_notice_note">ملاحظة: فترة الإخطار شهر واحد. إذا كانت هناك أي استثناءات، يجب مراجعة مديرك أولًا.</string>
+    <string name="why_do_you_want_to_leave">لماذا تريد المغادرة؟</string>
+    <string name="leave_reason_hint">يرجى ذكر سبب حقيقي لمساعدتنا على التحسين</string>
+    <string name="proceed_to_next_step">الانتقال إلى الخطوة التالية</string>
+    <string name="post_resignation_submission">تقديم ما بعد الاستقالة</string>
+    <string name="submission_step_1">سيتم إرسال طلب الاستقالة إلى مديرك والموارد البشرية لمراجعته وقبوله أو رفضه.</string>
+    <string name="submission_step_2">إذا تمت الموافقة على طلبك، ستكون هناك فترة إخطار مدتها شهر واحد. إذا كان لديك أي من أصول الشركة، فسيجب عليك إعادتها يوم الخميس التالي لآخر يوم عمل لك.</string>
+    <string name="submission_step_3">سينتظر مسؤول كل أصل إعادة أصول الشركة. وإذا لم يكن لديك أي أصول، فسيؤكدون عدم وجود أصول إضافية مطلوبة للإرجاع.</string>
+    <string name="your_company_assets">أصول الشركة الخاصة بك</string>
+    <string name="submit_resignation">إرسال الاستقالة</string>
+    <string name="pending">قيد الانتظار</string>
+    <string name="waiting_hr_response">في انتظار رد الموارد البشرية</string>
+    <string name="waiting_manager_response">في انتظار رد مديرك</string>
+    <string name="no_actions_yet">لا توجد إجراءات مطلوبة حاليًا</string>
+    <string name="rejected">مرفوض</string>
+    <string name="hr_approved_resignation">وافقت الموارد البشرية على استقالتك</string>
+    <string name="manager_declined_resignation">رفض المدير استقالتك</string>
+    <string name="rejected_contact_hr">إذا كانت لديك أي استفسارات، يرجى التواصل مع قسم الموارد البشرية أو إرسال بريد إلكتروني إلى [عنوان البريد الإلكتروني].</string>
+    <string name="add_new_resignation">إضافة استقالة جديدة</string>
+    <string name="approved">تمت الموافقة</string>
+    <string name="manager_approved_resignation">وافق المدير على استقالتك</string>
+    <string name="assets_will_be_checked">سيتم فحص أصول الشركة بواسطة المسؤولين المعنيين يوم الخميس التالي لآخر يوم عمل لك.</string>
+    <string name="see_whos_responsible">معرفة المسؤول</string>
+    <string name="it_department">قسم تكنولوجيا المعلومات</string>
+    <string name="finance_department">قسم المالية</string>
+    <string name="assigned_to">مخصص لـ: %1$s</string>
+    <string name="back_to_assets">العودة إلى الأصول</string>
+    <string name="resignation_accepted">تم قبول الاستقالة</string>
+    <string name="resignation_accepted_message">لقد أكملت جميع المتطلبات. نقدر مساهماتك ونتمنى لك الأفضل في مسيرتك المستقبلية.</string>
+    <string name="contact">تواصل:</string>
+    <string name="contact_message">إذا كنت ترغب في مناقشة قرارك بشكل أكبر، فنحن هنا لمساعدتك</string>
+    <string name="email_address">[عنوان البريد الإلكتروني]</string>
+    <string name="select_a_date">اختر تاريخًا</string>
+    <string name="cancel">إلغاء</string>
+    <string name="apply">تطبيق</string>
+    <string name="sun">الأحد</string>
+    <string name="mon">الإثنين</string>
+    <string name="tue">الثلاثاء</string>
+    <string name="wed">الأربعاء</string>
+    <string name="thu">الخميس</string>
+    <string name="fri">الجمعة</string>
+    <string name="sat">السبت</string>
+
+    <string name="error">خطأ</string>
+    <string name="ok">موافق</string>
+
+    <string name="employees">الموظفين</string>
+    <string name="your_employees">موظفيك</string>
+    <string name="no_employees_found">لا يوجد موظفين</string>
+
+    <string name="no_company_assets">لا توجد أصول شركة مسجلة.</string>
+    <string name="unknown_responsible">المسؤول غير معروف</string>
+
+    <string name="retry">إعادة المحاولة</string>
+
+</resources>

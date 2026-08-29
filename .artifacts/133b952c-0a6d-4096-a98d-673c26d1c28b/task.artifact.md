@@ -1,0 +1,5 @@
+- [x] Add `ProfileScreen` previews to `ProfileScreen.kt`
+    - [x] Define sample data
+    - [x] Implement `ProfileScreenPreview` calling `ProfileContent`
+    - [x] Wrap in `TwoBTheme`
+- [x] Verify the preview renders correctly

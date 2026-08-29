@@ -1,0 +1,128 @@
+<resources>
+    <string name="app_name" translatable="false">TwoB</string>
+
+
+    <!-- Profile -->
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="arabic">العربية</string>
+
+    <string name="personal_report">Personal Report</string>
+    <string name="shift_and_time_off">Shift &amp; Time Off</string>
+
+    <string name="settings">Settings</string>
+    <string name="change_password">Change Password</string>
+    <string name="change_my_profile_picture">Change my profile picture</string>
+    <string name="log_out">Log Out</string>
+
+    <string name="manager">Manager</string>
+    <string name="department">Department</string>
+
+    <!-- Bottom Navigation -->
+    <string name="fingerprint">Fingerprint</string>
+    <string name="services">Services</string>
+    <string name="ask_2b">Ask 2B</string>
+    <string name="notification">Notification</string>
+    <string name="profile">Profile</string>
+
+    <!-- Dialogs -->
+    <string name="your_manager">Your Manager:</string>
+    <string name="your_department">Your Department:</string>
+    <string name="no_manager_found">No manager found</string>
+
+    <string name="login_title">Login</string>
+    <string name="login_subtitle">Welcome back!</string>
+    <string name="login_id_label">ID</string>
+    <string name="login_password_label">Password</string>
+    <string name="login_button">Login</string>
+    <string name="login_loading">Loading…</string>
+    <string name="login_validation_error">Please enter username and password</string>
+    <string name="login_default_error">Incorrect username or password</string>
+    <string name="network_error_message">Something went wrong. Please check your connection and try again.</string>
+    <string name="fingerprint_login_label">Use Fingerprint to Log In (Next time)</string>
+    <string name="profile_dialog_generic_error">We couldn\'t load this information. Please try again.</string>
+
+    <!-- Services -->
+    <string name="search">Search</string>
+
+    <string name="permission_request">Permission Request</string>
+    <string name="offsite_work_request">Offsite Work Request</string>
+    <string name="fingerprint_history">Fingerprint History</string>
+    <string name="vacation_request">Vacation Request</string>
+    <string name="penalty_history">Penalty History</string>
+    <string name="kpis_earned">KPIs Earned</string>
+    <string name="official_holidays">Official Holidays</string>
+    <string name="internal_jobs">Internal Jobs</string>
+    <string name="company_assets">Company Assets</string>
+    <string name="resignation_request">Resignation Request</string>
+
+    <string name="request_resignation">Request Resignation</string>
+    <string name="resignation_intro_part_1">We are grateful for your contributions and sorry to see you go. If you would like to discuss your decision, we are here to</string>    <string name="resignation_contact_link">help</string>
+    <string name="resignation_intro_part_2">. Otherwise, please follow the steps below.</string>
+    <string name="resignation_date">Resignation Date</string>
+    <string name="select_resignation_date">Select your resignation date here</string>
+    <string name="last_working_day">Last Working day</string>
+    <string name="select_last_working_day">Select your last working day</string>
+    <string name="resignation_notice_note">Note: Your notice period is one month. If there are any exceptions, you must check with your manager first.</string>
+    <string name="why_do_you_want_to_leave">Why do you want to leave?</string>
+    <string name="leave_reason_hint">Please give a genuine reason to help us improve</string>
+    <string name="proceed_to_next_step">Proceed to the Next Step</string>
+    <string name="post_resignation_submission">Post-Resignation Submission</string>
+    <string name="submission_step_1">Your resignation request will be sent to your manager and HR, who will review it and accept or decline.</string>
+    <string name="submission_step_2">If your request is approved, you will have a notice period of one month. If you have any company assets, you will need to return them on the Thursday following your last working day.</string>
+    <string name="submission_step_3">Each asset owner will await the return of your company assets. If you don\'t have any, they will confirm that no additional assets are due for return.</string>
+    <string name="your_company_assets">Your Company Assets</string>
+    <string name="submit_resignation">Submit Resignation</string>
+    <string name="pending">Pending</string>
+    <string name="no_actions_yet">There is no need for any actions yet</string>
+    <string name="rejected">Rejected</string>
+    <string name="hr_approved_resignation">HR has approved your resignation</string>
+    <string name="manager_declined_resignation">Manager has declined your resignation</string>
+    <string name="rejected_contact_hr">If you have any concerns, please contact the HR department or send them an email at [email address].</string>
+    <string name="add_new_resignation">Add New Resignation</string>
+    <string name="approved">Approved</string>
+    <string name="manager_approved_resignation">Manager has approved your resignation</string>
+    <string name="assets_will_be_checked">Your company assets will be checked by the designated personnel on the Thursday after your last working day.</string>
+    <string name="it_department">IT Department</string>
+    <string name="finance_department">Finance Department</string>
+    <string name="assigned_to">Assigned to: %1$s</string>
+    <string name="back_to_assets">Back to Assets</string>
+    <string name="resignation_accepted">Resignation Accepted</string>
+    <string name="resignation_accepted_message">You have completed all requirements. We appreciate your contributions and wish you the best in your future endeavors.</string>
+    <string name="waiting_hr_response">Waiting for the HR\'s response</string>
+
+    <string name="waiting_manager_response">Waiting for your manager\'s response</string>
+
+    <string name="see_whos_responsible">See Who\'s Responsible</string>
+    <string name="contact">Contact:</string>
+    <string name="contact_message">If you would like to discuss your decision further, we are here to assist you</string>
+    <string name="email_address">[email address]</string>
+    <string name="select_a_date">Select a date</string>
+    <string name="cancel">Cancel</string>
+    <string name="apply">Apply</string>
+    <string name="sun">Sun</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+
+    <string name="error">Error</string>
+    <string name="ok">OK</string>
+    <string name="employees">Employees</string>
+    <string name="your_employees">Your Employees</string>
+    <string name="no_employees_found">No employees found</string>
+
+    <string name="no_company_assets">No company assets found.</string>
+    <string name="unknown_responsible">Unknown responsible person</string>
+    <string name="retry">Retry</string>
+
+    <string name="upcoming">Upcoming</string>
+    <string name="later_on">Later on</string>
+    <string name="no_vacations_yet">No vacations yet</string>
+    <string name="no_holidays_scheduled">No holidays or vacations scheduled</string>
+    <string name="check_back_later">yet. Check back later!</string>
+
+
+</resources>
