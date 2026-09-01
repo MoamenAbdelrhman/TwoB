@@ -1,4 +1,4 @@
-package com.example.twob.services.resignation.officialholidays
+package com.example.twob.services.officialholidays
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

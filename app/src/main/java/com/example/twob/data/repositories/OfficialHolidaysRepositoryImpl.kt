@@ -5,8 +5,8 @@ import com.example.twob.data.remote.NetworkResult
 import com.example.twob.data.remote.api.OfficialHolidaysApi
 import com.example.twob.data.remote.dto.OfficialHolidayDto
 import com.example.twob.data.remote.safeApiCall
-import com.example.twob.services.resignation.officialholidays.OfficialHoliday
-import com.example.twob.services.resignation.officialholidays.OfficialHolidaysRepository
+import com.example.twob.services.officialholidays.OfficialHoliday
+import com.example.twob.services.officialholidays.OfficialHolidaysRepository
 import kotlinx.coroutines.flow.first
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.RequestBody.Companion.toRequestBody

@@ -303,37 +303,6 @@ private fun ProfileContent(
 }
 
 @Composable
-private fun ProfileHeader() {
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(120.dp)
-            .background(
-                color = ProfileBlue,
-                shape = RoundedCornerShape(
-                    bottomStart = 38.dp,
-                    bottomEnd = 38.dp
-                )
-            )
-            .padding(horizontal = 18.dp),
-        contentAlignment = Alignment.CenterStart
-    ) {
-        Image(
-            painter = painterResource(
-                id = R.drawable.logo_2b
-            ),
-            contentDescription = "2B logo",
-            modifier = Modifier
-                .padding(start = 8.dp, bottom = 8.dp)
-                .size(56.dp)
-                .align(Alignment.BottomStart),
-            contentScale = ContentScale.Fit
-        )
-    }
-}
-
-
-@Composable
 private fun ProfileSectionContainer(
     content: @Composable ColumnScope.() -> Unit
 ) {
@@ -837,120 +806,6 @@ private fun ProfileDivider() {
 }
 
 @Composable
-private fun ProfileBottomNavigation() {
-
-    val navigationBarPadding =
-        WindowInsets.navigationBars
-            .asPaddingValues()
-            .calculateBottomPadding()
-
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(86.dp)
-            .shadow(
-                elevation = 10.dp,
-                shape = RoundedCornerShape(
-                    topStart = 18.dp,
-                    topEnd = 18.dp
-                ),
-
-                clip = false
-            )
-            .clip(
-                RoundedCornerShape(
-                    topStart = 18.dp,
-                    topEnd = 18.dp
-                )
-            )
-            .background(Color.White)
-    ) {
-
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(
-                    start = 8.dp,
-                    end = 8.dp,
-                    top = 9.dp,
-                    bottom = navigationBarPadding
-                ),
-            horizontalArrangement = Arrangement.SpaceEvenly,
-            verticalAlignment = Alignment.Top
-        ) {
-
-            BottomNavItem(
-                icon = R.drawable.fingerprint,
-                label = stringResource(R.string.fingerprint)
-            )
-
-            BottomNavItem(
-                icon = R.drawable.services,
-                label = stringResource(R.string.services)
-            )
-
-            BottomNavItem(
-                icon = R.drawable.ask2b,
-                label = stringResource(R.string.ask_2b)
-            )
-
-            BottomNavItem(
-                icon = R.drawable.notification,
-                label = stringResource(R.string.notification)
-            )
-
-            BottomNavItem(
-                icon = R.drawable.profile,
-                label = stringResource(R.string.profile),
-                selected = true
-            )
-        }
-    }
-}
-
-@Composable
-private fun BottomNavItem(
-    icon: Int,
-    label: String,
-    selected: Boolean = false
-) {
-    Column(
-        modifier = Modifier
-            .width(68.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-
-        Icon(
-            painter = painterResource(
-                id = icon),
-            contentDescription = label,
-            tint = if (selected) {
-                thirdColor
-            } else {
-                Color(0xFF9E9E9E)
-            },
-            modifier = Modifier.size(22.dp)
-        )
-
-        Spacer(
-            modifier = Modifier.height(5.dp)
-        )
-
-        Text(
-            text = label,
-            color = if (selected) {
-                thirdColor
-            } else {
-                Color(0xFF9E9E9E)
-            },
-            fontSize = 12.sp,
-            fontWeight = FontWeight.Normal,
-            maxLines = 1
-        )
-    }
-}
-
-@Composable
 private fun ManagerDialog(
     managers: List<EmployeeManager>,
     isLoading: Boolean,
@@ -1052,7 +907,6 @@ private fun ManagerDialog(
         }
     }
 }
-
 
 
 @Composable

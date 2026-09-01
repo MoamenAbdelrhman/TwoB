@@ -1,6 +1,8 @@
 package com.example.twob.di
 
 import android.content.pm.ApplicationInfo
+import com.example.twob.data.remote.ConnectivityObserver
+import com.example.twob.data.remote.ConnectivityObserverImpl
 import com.example.twob.data.remote.api.EmployeeProfileApi
 import com.example.twob.data.remote.api.LoginApi
 import com.example.twob.data.remote.api.OfficialHolidaysApi
@@ -87,5 +89,11 @@ val networkModule = module {
         get<Retrofit>(
             qualifier = named("authenticatedRetrofit")
         ).create(OfficialHolidaysApi::class.java)
+    }
+
+    single<ConnectivityObserver> {
+        ConnectivityObserverImpl(
+            context = get()
+        )
     }
 }

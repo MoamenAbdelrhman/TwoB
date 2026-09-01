@@ -118,5 +118,47 @@
     <string name="unknown_responsible">المسؤول غير معروف</string>
 
     <string name="retry">إعادة المحاولة</string>
+    <string name="upcoming">القادمة</string>
+    <string name="later_on">لاحقًا</string>
+    <string name="no_vacations_yet">لا توجد إجازات بعد</string>
+    <string name="no_holidays_scheduled">لا توجد إجازات أو عطلات مجدولة</string>
+    <string name="check_back_later">تحقق مرة أخرى لاحقًا!</string>
+
+    <!-- HR Letter Request -->
+    <string name="hr_letter_request">طلب خطاب من الموارد البشرية</string>
+
+    <string name="no_requests_yet">لا توجد طلبات</string>
+    <string name="no_hr_requests_message">لم تقم بتقديم أي طلب.</string>
+    <string name="start_hr_request_message">ابدأ بتقديم طلب جديد</string>
+
+    <string name="all">الكل</string>
+    <string name="prepared">جاهز</string>
+    <string name="prepared_for_collection">جاهز للاستلام</string>
+    <string name="received">تم الاستلام</string>
+
+    <string name="reason_for_request">سبب الطلب</string>
+    <string name="select_reason_for_hr_letter">اختر سبب طلب الخطاب</string>
+
+    <string name="address_to">موجه إلى</string>
+    <string name="write_recipient">اكتب الجهة الموجه إليها الخطاب</string>
+
+    <string name="letter_language">لغة الخطاب</string>
+    <string name="select_letter_language">اختر لغة الخطاب</string>
+
+    <string name="note">ملاحظة</string>
+    <string name="add_note_here">أضف ملاحظتك هنا</string>
+
+    <string name="hr_letter_note">ملاحظة: يمكنك استلام خطابك من قسم الموارد البشرية بعد تقديم الطلب.</string>
+
+    <string name="request_letter">طلب الخطاب</string>
+    <string name="add_hr_letter_request">إضافة طلب خطاب</string>
+
+    <string name="employment_verification">إثبات عمل</string>
+    <string name="salary_certificate">شهادة راتب</string>
+    <string name="letter_for_bank">خطاب للبنك</string>
+    <string name="visa_application">طلب تأشيرة</string>
+    <string name="proof_of_experience">إثبات خبرة</string>
+    <string name="promotion_confirmation">تأكيد ترقية</string>
+    <string name="other">أخرى</string>
 
 </resources>

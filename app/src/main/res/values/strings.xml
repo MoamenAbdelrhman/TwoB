@@ -124,5 +124,40 @@
     <string name="no_holidays_scheduled">No holidays or vacations scheduled</string>
     <string name="check_back_later">yet. Check back later!</string>
 
+    <!-- HR Letter Request -->
+    <string name="hr_letter_request">HR Letter Request</string>
+
+    <string name="no_requests_yet">No Requests Yet</string>
+    <string name="no_hr_requests_message">You have not made any request.</string>    <string name="start_hr_request_message">Start by submitting a new one</string>
+
+    <string name="all">All</string>
+    <string name="prepared">Prepared</string>
+    <string name="prepared_for_collection">Prepared for Collection</string>
+    <string name="received">Received</string>
+
+    <string name="reason_for_request">Reason for Request</string>
+    <string name="select_reason_for_hr_letter">Select reason for HR letter</string>
+
+    <string name="address_to">Address To</string>
+    <string name="write_recipient">Write the recipient of this letter</string>
+
+    <string name="letter_language">Letter Language</string>
+    <string name="select_letter_language">Select the language for your letter</string>
+
+    <string name="note">Note</string>
+    <string name="add_note_here">Add your note here</string>
+
+    <string name="hr_letter_note">Note: You can receive your letter from the HR department after submitting your request.</string>
+
+    <string name="request_letter">Request Letter</string>
+    <string name="add_hr_letter_request">Add HR letter request</string>
+
+    <string name="employment_verification">Employment Verification</string>
+    <string name="salary_certificate">Salary Certificate</string>
+    <string name="letter_for_bank">Letter for Bank</string>
+    <string name="visa_application">Visa Application</string>
+    <string name="proof_of_experience">Proof of Experience</string>
+    <string name="promotion_confirmation">Promotion Confirmation</string>
+    <string name="other">Other</string>
 
 </resources>

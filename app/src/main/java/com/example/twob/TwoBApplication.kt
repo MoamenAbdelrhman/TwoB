@@ -3,6 +3,7 @@ package com.example.twob
 import android.app.Application
 import com.example.twob.di.dataStoreModule
 import com.example.twob.di.headerModule
+import com.example.twob.di.hrLetterModule
 import com.example.twob.di.loginModule
 import com.example.twob.di.networkModule
 import com.example.twob.di.officialHolidaysModule
@@ -29,7 +30,8 @@ class TwoBApplication : Application() {
                 sessionModule,
                 resignationModule,
                 officialHolidaysModule,
-                headerModule
+                headerModule,
+                hrLetterModule
             )
         }
     }

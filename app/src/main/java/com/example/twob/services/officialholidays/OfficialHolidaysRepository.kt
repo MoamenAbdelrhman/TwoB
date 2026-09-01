@@ -1,4 +1,4 @@
-package com.example.twob.services.resignation.officialholidays
+package com.example.twob.services.officialholidays
 
 import com.example.twob.data.remote.NetworkResult
 

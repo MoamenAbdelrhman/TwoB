@@ -1,4 +1,4 @@
-package com.example.twob.services.resignation.officialholidays
+package com.example.twob.services.officialholidays
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -44,6 +44,8 @@ import com.example.twob.components.MainBottomNavigation
 import com.example.twob.components.MainDestination
 import com.example.twob.ui.theme.secondaryColor
 import org.koin.androidx.compose.koinViewModel
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 private val HolidaysOrange = Color(0xFFFF6B2C)
 private val HolidaysGreen = Color(0xFF009B3A)
@@ -129,7 +131,7 @@ fun OfficialHolidaysScreen(
 }
 
 
-@Composable
+/*@Composable
 private fun OfficialHolidaysHeader(
     onBackClick: () -> Unit
 ) {
@@ -191,7 +193,9 @@ private fun OfficialHolidaysHeader(
             modifier = Modifier.width(18.dp)
         )
     }
-}
+}*/
+
+
 @Composable
 private fun HolidaysList(
     upcoming: OfficialHoliday,
@@ -275,13 +279,13 @@ private fun formatHolidayDate(
 
     return try {
 
-        java.time.LocalDateTime
+        LocalDateTime
             .parse(
                 value,
-                java.time.format.DateTimeFormatter.ISO_LOCAL_DATE_TIME
+                DateTimeFormatter.ISO_LOCAL_DATE_TIME
             )
             .format(
-                java.time.format.DateTimeFormatter.ofPattern(
+                DateTimeFormatter.ofPattern(
                     "d MMM yyyy"
                 )
             )
@@ -309,7 +313,7 @@ private fun EmptyHolidaysContent() {
 
         Image(
             painter = painterResource(
-                id = R.drawable.request_errand
+                id = R.drawable.emptyicon
             ),
 
             contentDescription = null,

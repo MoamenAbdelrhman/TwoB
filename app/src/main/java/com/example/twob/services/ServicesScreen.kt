@@ -68,7 +68,9 @@ enum class ServiceDestination {
     OFFICIAL_HOLIDAYS,
     INTERNAL_JOBS,
     COMPANY_ASSETS,
-    RESIGNATION
+    RESIGNATION,
+
+    HR_LETTER_REQUEST
 }
 
 data class ServiceItem(
@@ -127,6 +129,11 @@ private val services = listOf(
         titleRes = R.string.resignation_request,
         iconRes = R.drawable.resignation_request,
         destination = ServiceDestination.RESIGNATION
+    ),
+    ServiceItem(
+        titleRes = R.string.hr_letter_request,
+        iconRes = R.drawable.hrletter,
+        destination = ServiceDestination.HR_LETTER_REQUEST
     )
 )
 
@@ -369,6 +376,8 @@ private fun ServiceCard(
         )
     }
 }
+
+
 
 @Preview(showBackground = true)
 @Composable

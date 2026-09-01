@@ -12,8 +12,9 @@ import com.example.twob.login.LoginScreen
 import com.example.twob.profile.ProfileScreen
 import com.example.twob.services.ServicesScreen
 import com.example.twob.services.ServiceDestination
+import com.example.twob.services.hrletter.HRLetterRequestScreen
 import com.example.twob.services.resignation.RequestResignationScreen
-import com.example.twob.services.resignation.officialholidays.OfficialHolidaysScreen
+import com.example.twob.services.officialholidays.OfficialHolidaysScreen
 import com.example.twob.session.SessionState
 import com.example.twob.session.SessionViewModel
 
@@ -23,6 +24,9 @@ private const val SERVICES_ROUTE = "services"
 private const val RESIGNATION_ROUTE = "resignation_request"
 
 private const val OFFICIAL_HOLIDAYS_ROUTE = "official_holidays"
+
+private const val HR_LETTER_REQUEST_ROUTE = "hr_letter_request"
+
 @Composable
 fun AppNavigation(
     sessionViewModel: SessionViewModel
@@ -118,6 +122,14 @@ fun AppNavigation(
                                 launchSingleTop = true
                             }
                         }
+                        ServiceDestination.HR_LETTER_REQUEST -> {
+
+                            navController.navigate(
+                                HR_LETTER_REQUEST_ROUTE
+                            ) {
+                                launchSingleTop = true
+                            }
+                        }
 
                         else -> Unit
                     }
@@ -155,6 +167,26 @@ fun AppNavigation(
                 },
 
                 onDestinationSelected = { destination ->
+                    navigateToDestination(
+                        navController = navController,
+                        destination = destination
+                    )
+                }
+            )
+        }
+
+        composable(
+            HR_LETTER_REQUEST_ROUTE
+        ) {
+
+            HRLetterRequestScreen(
+
+                onBack = {
+                    navController.popBackStack()
+                },
+
+                onDestinationSelected = { destination ->
+
                     navigateToDestination(
                         navController = navController,
                         destination = destination

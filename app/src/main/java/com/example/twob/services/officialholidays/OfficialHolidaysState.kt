@@ -1,4 +1,4 @@
-package com.example.twob.services.resignation.officialholidays
+package com.example.twob.services.officialholidays
 
 data class OfficialHolidaysState(
     val isLoading: Boolean = false,
