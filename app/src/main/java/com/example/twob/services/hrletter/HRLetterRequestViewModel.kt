@@ -16,10 +16,7 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlin.time.Duration.Companion.milliseconds
-import kotlinx.coroutines.time.debounce
 import java.net.UnknownHostException
-import kotlin.time.Duration.Companion.milliseconds
 
 class HRLetterRequestViewModel(
     private val repository: HRLetterRepository,
@@ -36,7 +33,7 @@ class HRLetterRequestViewModel(
 
         viewModelScope.launch {
             loadStatuses()
-            loadRequests()
+            loadRequests(statusId = null, showFullScreenLoading = true)
         }
 
         observeConnectivity()
@@ -82,15 +79,28 @@ class HRLetterRequestViewModel(
         }
 
         loadStatuses()
-        loadRequests()
+        loadRequests(
+            statusId = currentState.selectedStatus?.id,
+            showFullScreenLoading = true
+        )
     }
-    private suspend fun loadRequests() {
+    // `statusId`: which status tab to fetch for (null = "All").
+    // `showFullScreenLoading`: true for the very first fetch of the screen
+    // (nothing on screen yet, so it's fine to show a full loader). false
+    // for tab switches / background refreshes, where the tabs and any
+    // existing list are already visible and must stay that way — only
+    // `isTabLoading` toggles, `isLoading` is left untouched.
+    private suspend fun loadRequests(
+        statusId: Int? = _state.value.selectedStatus?.id,
+        showFullScreenLoading: Boolean = true
+    ) {
 
         _state.update {
-            it.copy(
-                isLoading = true,
-                errorMessage = null
-            )
+            if (showFullScreenLoading) {
+                it.copy(isLoading = true, errorMessage = null)
+            } else {
+                it.copy(isTabLoading = true, errorMessage = null)
+            }
         }
 
         val employeeId = getEmployeeId()
@@ -100,6 +110,7 @@ class HRLetterRequestViewModel(
             _state.update {
                 it.copy(
                     isLoading = false,
+                    isTabLoading = false,
                     requests = emptyList(),
                     errorMessage = "Employee ID is not available"
                 )
@@ -110,13 +121,15 @@ class HRLetterRequestViewModel(
 
         repository
             .getHRLetters(
-                employeeId = employeeId
+                employeeId = employeeId,
+                statusId = statusId
             )
             .onSuccess { requests ->
 
                 _state.update {
                     it.copy(
                         isLoading = false,
+                        isTabLoading = false,
                         requests = requests,
                         hasLoadedRequests = true,
                         errorMessage = null
@@ -128,6 +141,7 @@ class HRLetterRequestViewModel(
                 _state.update {
                     it.copy(
                         isLoading = false,
+                        isTabLoading = false,
                         errorMessage = getUserFriendlyErrorMessage(error)
                     )
                 }
@@ -288,14 +302,24 @@ class HRLetterRequestViewModel(
                 val newStatusId =
                     action.status?.id
 
-                // Same tab → do nothing
                 if (currentStatusId == newStatusId) {
                     return
                 }
 
+                // Update the selection immediately so the tab highlights
+                // right away, then fetch that status's letters from the
+                // server. `showFullScreenLoading = false` is the key part:
+                // it makes loadRequests() toggle `isTabLoading` instead of
+                // `isLoading`, so only the content area below the tabs
+                // shows a loader — the tabs themselves never unmount.
                 _state.update {
-                    it.copy(
-                        selectedStatus = action.status
+                    it.copy(selectedStatus = action.status)
+                }
+
+                viewModelScope.launch {
+                    loadRequests(
+                        statusId = newStatusId,
+                        showFullScreenLoading = false
                     )
                 }
             }
@@ -387,7 +411,10 @@ class HRLetterRequestViewModel(
                         )
                     }
 
-                    loadRequests()
+                    loadRequests(
+                        statusId = currentState.selectedStatus?.id,
+                        showFullScreenLoading = false
+                    )
                 }
                 .onFailure { error ->
 

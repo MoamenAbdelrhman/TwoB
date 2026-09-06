@@ -12,6 +12,8 @@ enum class HRLetterScreen {
 
 data class HRLetterRequestState(
     val isLoading: Boolean = false,
+    
+    val isTabLoading: Boolean = false,
 
     val requests: List<HRLetterRequest> = emptyList(),
 

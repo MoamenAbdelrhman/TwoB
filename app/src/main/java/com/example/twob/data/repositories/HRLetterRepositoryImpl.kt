@@ -12,7 +12,8 @@ class HRLetterRepositoryImpl(
 ) : HRLetterRepository {
 
     override suspend fun getHRLetters(
-        employeeId: Int
+        employeeId: Int,
+        statusId: Int?
     ): Result<List<HRLetterRequest>> {
 
         return try {
@@ -21,7 +22,7 @@ class HRLetterRepositoryImpl(
                 languageOfRequest = "".toTextBody(),
                 employeeId = employeeId.toString().toTextBody(),
                 pageSize = "".toTextBody(),
-                status = "".toTextBody(),
+                status = statusId?.toString().orEmpty().toTextBody(),
                 filterType = "".toTextBody(),
                 sortType = "".toTextBody(),
                 pageNumber = "".toTextBody(),

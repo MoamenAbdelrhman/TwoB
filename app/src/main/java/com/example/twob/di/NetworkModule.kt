@@ -4,6 +4,7 @@ import android.content.pm.ApplicationInfo
 import com.example.twob.data.remote.ConnectivityObserver
 import com.example.twob.data.remote.ConnectivityObserverImpl
 import com.example.twob.data.remote.api.EmployeeProfileApi
+import com.example.twob.data.remote.api.InternalJobsApi
 import com.example.twob.data.remote.api.LoginApi
 import com.example.twob.data.remote.api.OfficialHolidaysApi
 import com.example.twob.data.remote.api.ResignationApi
@@ -96,4 +97,13 @@ val networkModule = module {
             context = get()
         )
     }
+
+    single<InternalJobsApi> {
+        get<Retrofit>(
+            qualifier = named("authenticatedRetrofit")
+        ).create(
+            InternalJobsApi::class.java
+        )
+    }
+
 }

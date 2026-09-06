@@ -8,7 +8,6 @@ import com.example.twob.data.remote.dto.ResignationRequestDto
 import com.example.twob.data.remote.safeApiCall
 import com.example.twob.services.resignation.ResignationAsset
 import com.example.twob.services.resignation.ResignationAssetDepartment
-import com.example.twob.services.resignation.ResignationRepository
 import kotlinx.coroutines.flow.first
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.RequestBody.Companion.toRequestBody

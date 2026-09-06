@@ -160,4 +160,50 @@
     <string name="promotion_confirmation">Promotion Confirmation</string>
     <string name="other">Other</string>
 
+
+    <!-- Internal Jobs -->
+    <string name="internal_jobs_available">Available</string>
+    <string name="internal_jobs_applied">Applied</string>
+    <string name="internal_jobs_closed">Closed</string>
+
+    <string name="internal_jobs_view_vacancy">View Vacancy</string>
+    <string name="internal_jobs_view_application">View Application</string>
+
+    <string name="internal_jobs_vacancy">Finance Vacancy</string>
+    <string name="internal_jobs_your_application">Your Application</string>
+
+    <string name="internal_jobs_apply_now">Apply Now</string>
+
+    <string name="internal_jobs_about">About the job</string>
+    <string name="internal_jobs_requirements">Requirements</string>
+    <string name="internal_jobs_job_note">Job note</string>
+
+    <string name="internal_jobs_upload_resume">Upload your Resume</string>
+    <string name="internal_jobs_max_file_size">Max. file size: 5MB</string>
+    <string name="internal_jobs_select_file">Select File</string>
+
+    <string name="internal_jobs_your_skills">Your Skills</string>
+    <string name="internal_jobs_skills_hint">Write down your skills</string>
+    <string name="internal_jobs_note_hint">Write down your note</string>
+
+    <string name="internal_jobs_applied_on">Applied on %1$s</string>
+    <string name="internal_jobs_applied_date">• Applied %1$s</string>
+
+    <string name="internal_jobs_in_consideration">In Consideration</string>
+    <string name="internal_jobs_hired">Hired</string>
+    <string name="internal_jobs_applied_status">Applied</string>
+    <string name="internal_jobs_not_selected">Not Selected</string>
+
+    <string name="internal_jobs_vacancy_title">%1$s Vacancy</string>
+
+    <string name="internal_jobs_resume_downloaded">Resume downloaded</string>
+    <string name="internal_jobs_view">View</string>
+
+    <string name="internal_jobs_delete_application">Delete Application</string>
+
+    <string name="internal_jobs_delete_confirmation">Are you sure you want to delete?</string>
+    <string name="internal_jobs_delete_message">This will delete your application</string>
+    <string name="internal_jobs_yes_delete">Yes, delete</string>
+    <string name="internal_jobs_no_keep">No, keep It</string>
+
 </resources>

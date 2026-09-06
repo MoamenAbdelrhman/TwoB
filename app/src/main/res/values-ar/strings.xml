@@ -161,4 +161,50 @@
     <string name="promotion_confirmation">تأكيد ترقية</string>
     <string name="other">أخرى</string>
 
+
+    <!-- Internal Jobs -->
+    <string name="internal_jobs_available">المتاحة</string>
+    <string name="internal_jobs_applied">المُقدّم عليها</string>
+    <string name="internal_jobs_closed">مغلقة</string>
+
+    <string name="internal_jobs_view_vacancy">عرض الوظيفة</string>
+    <string name="internal_jobs_view_application">عرض الطلب</string>
+
+    <string name="internal_jobs_vacancy">وظيفة المالية</string>
+    <string name="internal_jobs_your_application">طلبك</string>
+
+    <string name="internal_jobs_apply_now">تقديم الآن</string>
+
+    <string name="internal_jobs_about">عن الوظيفة</string>
+    <string name="internal_jobs_requirements">المتطلبات</string>
+    <string name="internal_jobs_job_note">ملاحظات الوظيفة</string>
+
+    <string name="internal_jobs_upload_resume">رفع السيرة الذاتية</string>
+    <string name="internal_jobs_max_file_size">الحد الأقصى لحجم الملف: 5 ميجابايت</string>
+    <string name="internal_jobs_select_file">اختيار ملف</string>
+
+    <string name="internal_jobs_your_skills">مهاراتك</string>
+    <string name="internal_jobs_skills_hint">اكتب مهاراتك</string>
+    <string name="internal_jobs_note_hint">اكتب ملاحظتك</string>
+
+    <string name="internal_jobs_applied_on">تم التقديم في %1$s</string>
+    <string name="internal_jobs_applied_date">• تم التقديم في %1$s</string>
+
+    <string name="internal_jobs_in_consideration">قيد النظر</string>
+    <string name="internal_jobs_hired">تم التوظيف</string>
+    <string name="internal_jobs_applied_status">تم التقديم</string>
+    <string name="internal_jobs_not_selected">لم يتم الاختيار</string>
+
+    <string name="internal_jobs_vacancy_title">وظيفة %1$s</string>
+
+    <string name="internal_jobs_resume_downloaded">تم تحميل السيرة الذاتية</string>
+    <string name="internal_jobs_view">عرض</string>
+
+    <string name="internal_jobs_delete_application">حذف الطلب</string>
+
+    <string name="internal_jobs_delete_confirmation">هل أنت متأكد أنك تريد الحذف؟</string>
+    <string name="internal_jobs_delete_message">سيؤدي هذا إلى حذف طلبك</string>
+    <string name="internal_jobs_yes_delete">نعم، احذف</string>
+    <string name="internal_jobs_no_keep">لا، احتفظ به</string>
+
 </resources>

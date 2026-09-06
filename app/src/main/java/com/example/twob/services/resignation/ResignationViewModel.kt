@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.twob.data.remote.NetworkResult
 import com.example.twob.data.remote.dto.ResignationDetailsDto
+import com.example.twob.data.repositories.ResignationRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

@@ -30,7 +30,8 @@ data class HRLetterLanguage(
 interface HRLetterRepository {
 
     suspend fun getHRLetters(
-        employeeId: Int
+        employeeId: Int,
+        statusId: Int? = null
     ): Result<List<HRLetterRequest>>
 
     suspend fun registerHRLetter(

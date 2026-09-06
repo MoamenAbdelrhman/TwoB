@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.LocalActivityResultRegistryOwner
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.CompositionLocalProvider
@@ -52,47 +53,73 @@ class MainActivity : ComponentActivity() {
                     initialValue = "en"
                 )
 
-            val baseConfiguration = LocalConfiguration.current
-            val baseContext = LocalContext.current
+            val baseConfiguration =
+                LocalConfiguration.current
 
-            val locale = remember(culture) {
-                Locale.forLanguageTag(culture)
-            }
+            val baseContext =
+                LocalContext.current
 
-            // A Configuration (and matching Context) pinned to the
-            // user-selected app language, independent of the device locale.
-            val localizedConfiguration = remember(locale, baseConfiguration) {
-                Configuration(baseConfiguration).apply {
-                    setLocale(locale)
+            val locale =
+                remember(culture) {
+                    Locale.forLanguageTag(culture)
                 }
-            }
 
-            val localizedContext = remember(localizedConfiguration) {
-                baseContext.createConfigurationContext(localizedConfiguration)
-            }
-
-            // Derived from the locale itself (not hardcoded to "ar") so any
-            // future RTL language keeps working automatically.
-            val layoutDirection = remember(locale) {
-                if (TextUtils.getLayoutDirectionFromLocale(locale) ==
-                    View.LAYOUT_DIRECTION_RTL
+            val localizedConfiguration =
+                remember(
+                    locale,
+                    baseConfiguration
                 ) {
-                    LayoutDirection.Rtl
-                } else {
-                    LayoutDirection.Ltr
+                    Configuration(
+                        baseConfiguration
+                    ).apply {
+                        setLocale(locale)
+                    }
                 }
-            }
+
+            val localizedContext =
+                remember(
+                    localizedConfiguration
+                ) {
+                    baseContext.createConfigurationContext(
+                        localizedConfiguration
+                    )
+                }
+
+            val layoutDirection =
+                remember(locale) {
+
+                    if (
+                        TextUtils.getLayoutDirectionFromLocale(
+                            locale
+                        ) == View.LAYOUT_DIRECTION_RTL
+                    ) {
+                        LayoutDirection.Rtl
+                    } else {
+                        LayoutDirection.Ltr
+                    }
+                }
 
             CompositionLocalProvider(
-                LocalConfiguration provides localizedConfiguration,
-                LocalContext provides localizedContext,
-                LocalLayoutDirection provides layoutDirection
+
+                LocalConfiguration provides
+                        localizedConfiguration,
+
+                LocalContext provides
+                        localizedContext,
+
+                LocalLayoutDirection provides
+                        layoutDirection,
+
+                LocalActivityResultRegistryOwner provides
+                        this@MainActivity
+
             ) {
 
                 TwoBTheme {
 
                     AppNavigation(
-                        sessionViewModel = sessionViewModel
+                        sessionViewModel =
+                            sessionViewModel
                     )
                 }
             }

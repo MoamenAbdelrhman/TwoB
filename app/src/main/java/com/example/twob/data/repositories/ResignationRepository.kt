@@ -1,7 +1,8 @@
-package com.example.twob.services.resignation
+package com.example.twob.data.repositories
 
 import com.example.twob.data.remote.NetworkResult
 import com.example.twob.data.remote.dto.ResignationDetailsDto
+import com.example.twob.services.resignation.ResignationAssetDepartment
 
 interface ResignationRepository {
 

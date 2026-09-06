@@ -10,22 +10,32 @@ import androidx.navigation.compose.rememberNavController
 import com.example.twob.components.MainDestination
 import com.example.twob.login.LoginScreen
 import com.example.twob.profile.ProfileScreen
-import com.example.twob.services.ServicesScreen
 import com.example.twob.services.ServiceDestination
+import com.example.twob.services.ServicesScreen
 import com.example.twob.services.hrletter.HRLetterRequestScreen
-import com.example.twob.services.resignation.RequestResignationScreen
+import com.example.twob.services.internaljobs.InternalJobsScreen
 import com.example.twob.services.officialholidays.OfficialHolidaysScreen
+import com.example.twob.services.resignation.RequestResignationScreen
 import com.example.twob.session.SessionState
 import com.example.twob.session.SessionViewModel
 
 private const val LOGIN_ROUTE = "login"
+
 private const val PROFILE_ROUTE = "profile"
+
 private const val SERVICES_ROUTE = "services"
-private const val RESIGNATION_ROUTE = "resignation_request"
 
-private const val OFFICIAL_HOLIDAYS_ROUTE = "official_holidays"
+private const val RESIGNATION_ROUTE =
+    "resignation_request"
 
-private const val HR_LETTER_REQUEST_ROUTE = "hr_letter_request"
+private const val OFFICIAL_HOLIDAYS_ROUTE =
+    "official_holidays"
+
+private const val HR_LETTER_REQUEST_ROUTE =
+    "hr_letter_request"
+
+private const val INTERNAL_JOBS_ROUTE =
+    "internal_jobs"
 
 @Composable
 fun AppNavigation(
@@ -33,13 +43,15 @@ fun AppNavigation(
 ) {
 
     val sessionState by
-    sessionViewModel.state.collectAsStateWithLifecycle()
+    sessionViewModel.state
+        .collectAsStateWithLifecycle()
 
     if (sessionState is SessionState.Loading) {
         return
     }
 
-    val navController = rememberNavController()
+    val navController =
+        rememberNavController()
 
     val startDestination =
         when (sessionState) {
@@ -68,7 +80,9 @@ fun AppNavigation(
                         PROFILE_ROUTE
                     ) {
 
-                        popUpTo(LOGIN_ROUTE) {
+                        popUpTo(
+                            LOGIN_ROUTE
+                        ) {
                             inclusive = true
                         }
 
@@ -81,12 +95,16 @@ fun AppNavigation(
         composable(PROFILE_ROUTE) {
 
             ProfileScreen(
+
                 onLogout = {
 
                     navController.navigate(
                         LOGIN_ROUTE
                     ) {
-                        popUpTo(PROFILE_ROUTE) {
+
+                        popUpTo(
+                            PROFILE_ROUTE
+                        ) {
                             inclusive = true
                         }
 
@@ -94,7 +112,8 @@ fun AppNavigation(
                     }
                 },
 
-                onDestinationSelected = { destination ->
+                onDestinationSelected = {
+                        destination ->
 
                     navigateToDestination(
                         navController = navController,
@@ -107,22 +126,36 @@ fun AppNavigation(
         composable(SERVICES_ROUTE) {
 
             ServicesScreen(
-                onServiceClick = { service ->
 
-                    when (service.destination) {
+                onServiceClick = {
+                        service ->
 
-                        ServiceDestination.RESIGNATION -> {
-                            navController.navigate(RESIGNATION_ROUTE) {
+                    when (
+                        service.destination
+                    ) {
+
+                        ServiceDestination
+                            .RESIGNATION -> {
+
+                            navController.navigate(
+                                RESIGNATION_ROUTE
+                            ) {
                                 launchSingleTop = true
                             }
                         }
 
-                        ServiceDestination.OFFICIAL_HOLIDAYS -> {
-                            navController.navigate(OFFICIAL_HOLIDAYS_ROUTE) {
+                        ServiceDestination
+                            .OFFICIAL_HOLIDAYS -> {
+
+                            navController.navigate(
+                                OFFICIAL_HOLIDAYS_ROUTE
+                            ) {
                                 launchSingleTop = true
                             }
                         }
-                        ServiceDestination.HR_LETTER_REQUEST -> {
+
+                        ServiceDestination
+                            .HR_LETTER_REQUEST -> {
 
                             navController.navigate(
                                 HR_LETTER_REQUEST_ROUTE
@@ -131,10 +164,22 @@ fun AppNavigation(
                             }
                         }
 
+                        ServiceDestination
+                            .INTERNAL_JOBS -> {
+
+                            navController.navigate(
+                                INTERNAL_JOBS_ROUTE
+                            ) {
+                                launchSingleTop = true
+                            }
+                        }
+
                         else -> Unit
                     }
                 },
-                onDestinationSelected = { destination ->
+
+                onDestinationSelected = {
+                        destination ->
 
                     navigateToDestination(
                         navController = navController,
@@ -142,16 +187,21 @@ fun AppNavigation(
                     )
                 }
             )
-
         }
 
-        composable(RESIGNATION_ROUTE) {
+        composable(
+            RESIGNATION_ROUTE
+        ) {
 
             RequestResignationScreen(
+
                 onBack = {
                     navController.popBackStack()
                 },
-                onDestinationSelected = { destination ->
+
+                onDestinationSelected = {
+                        destination ->
+
                     navigateToDestination(
                         navController = navController,
                         destination = destination
@@ -159,14 +209,20 @@ fun AppNavigation(
                 }
             )
         }
-        composable(OFFICIAL_HOLIDAYS_ROUTE) {
+
+        composable(
+            OFFICIAL_HOLIDAYS_ROUTE
+        ) {
 
             OfficialHolidaysScreen(
+
                 onBackClick = {
                     navController.popBackStack()
                 },
 
-                onDestinationSelected = { destination ->
+                onDestinationSelected = {
+                        destination ->
+
                     navigateToDestination(
                         navController = navController,
                         destination = destination
@@ -185,7 +241,29 @@ fun AppNavigation(
                     navController.popBackStack()
                 },
 
-                onDestinationSelected = { destination ->
+                onDestinationSelected = {
+                        destination ->
+
+                    navigateToDestination(
+                        navController = navController,
+                        destination = destination
+                    )
+                }
+            )
+        }
+
+        composable(
+            INTERNAL_JOBS_ROUTE
+        ) {
+
+            InternalJobsScreen(
+
+                onBack = {
+                    navController.popBackStack()
+                },
+
+                onDestinationSelected = {
+                        destination ->
 
                     navigateToDestination(
                         navController = navController,
@@ -201,12 +279,18 @@ private fun navigateToDestination(
     navController: NavHostController,
     destination: MainDestination
 ) {
+
     when (destination) {
 
         MainDestination.PROFILE -> {
-            navController.navigate(PROFILE_ROUTE) {
+
+            navController.navigate(
+                PROFILE_ROUTE
+            ) {
+
                 popUpTo(
-                    navController.graph.startDestinationId
+                    navController.graph
+                        .startDestinationId
                 ) {
                     saveState = true
                 }
@@ -217,9 +301,14 @@ private fun navigateToDestination(
         }
 
         MainDestination.SERVICES -> {
-            navController.navigate(SERVICES_ROUTE) {
+
+            navController.navigate(
+                SERVICES_ROUTE
+            ) {
+
                 popUpTo(
-                    navController.graph.startDestinationId
+                    navController.graph
+                        .startDestinationId
                 ) {
                     saveState = true
                 }
@@ -229,10 +318,13 @@ private fun navigateToDestination(
             }
         }
 
-        MainDestination.FINGERPRINT -> Unit
+        MainDestination.FINGERPRINT ->
+            Unit
 
-        MainDestination.ASK_2B -> Unit
+        MainDestination.ASK_2B ->
+            Unit
 
-        MainDestination.NOTIFICATION -> Unit
+        MainDestination.NOTIFICATION ->
+            Unit
     }
 }
